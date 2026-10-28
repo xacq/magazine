@@ -1,5 +1,11 @@
 # Magazine by GreenPC
 
+![Magazine by GreenPC](public/images/magazine-greenpc-logo-v1.png)
+
+## Estado del proyecto
+
+✅ En desarrollo
+
 Prototipo de plataforma editorial y bolsa de empleo construido con Laravel 12.
 
 ## Requisitos locales
