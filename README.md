@@ -1,5 +1,13 @@
 # n8n local con Docker
 
+![Magazine by GreenPC](portal/public/images/magazine-greenpc-logo-v1.png)
+
+## Estado del proyecto
+
+- Estado: En desarrollo
+- Plataforma: n8n + Laravel
+- Logotipo actual: cargado desde la marca de GreenPC
+
 Esta configuración ejecuta n8n en Docker y conserva sus workflows y credenciales
 en el volumen `n8n_data`.
 
