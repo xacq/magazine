@@ -1,4 +1,4 @@
-# Pulso Laboral
+# Magazine by GreenPC
 
 Prototipo de plataforma editorial y bolsa de empleo construido con Laravel 12.
 
