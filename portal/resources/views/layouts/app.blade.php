@@ -9,7 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,600;6..72,700&display=swap" rel="stylesheet">
-    <script defer src="https://code.iconify.design/iconify-icon/3.0.0/iconify-icon.min.js"></script>
+    <script defer src="{{ asset('vendor/iconify/iconify-icon.min.js') }}"></script>
+    <script defer src="{{ asset('js/icons.js') }}" data-icon-collection="{{ asset('vendor/iconify/ph-icons.json') }}"></script>
     <link rel="stylesheet" href="{{ asset('css/site.css') }}">
     <link rel="stylesheet" href="{{ asset('css/theme.css') }}">
 </head>
@@ -17,7 +18,7 @@
     <div class="topline">
         <div class="container topline-inner">
             <span>{{ now()->locale('es')->translatedFormat('l, j \d\e F \d\e Y') }}</span>
-            <span class="topline-message"><iconify-icon icon="ph:globe-hemisphere-west"></iconify-icon> Ecuador · Tecnología, economía y oportunidades</span>
+            <span class="topline-message"><iconify-icon icon="@local:ph:globe-hemisphere-west"></iconify-icon> Ecuador · Tecnología, economía y oportunidades</span>
         </div>
     </div>
     <header class="site-header">
@@ -26,12 +27,12 @@
                 <img class="brand-logo" src="{{ asset('images/magazine-greenpc-logo-v1.png') }}" alt="">
             </a>
             <nav class="main-nav" aria-label="Navegación principal">
-                <a class="{{ request()->routeIs('home') ? 'active' : '' }}" href="{{ route('home') }}"><iconify-icon icon="ph:house-line"></iconify-icon><span>Portada</span></a>
-                <a class="{{ request()->routeIs('articles.*') ? 'active' : '' }}" href="{{ route('articles.index') }}"><iconify-icon icon="ph:newspaper"></iconify-icon><span>Noticias</span></a>
-                <a class="{{ request()->routeIs('jobs.*') ? 'active' : '' }}" href="{{ route('jobs.index') }}"><iconify-icon icon="ph:briefcase"></iconify-icon><span>Empleos</span></a>
-                <a href="#newsletter"><iconify-icon icon="ph:envelope-simple"></iconify-icon><span>Boletín</span></a>
+                <a class="{{ request()->routeIs('home') ? 'active' : '' }}" href="{{ route('home') }}"><iconify-icon icon="@local:ph:house-line"></iconify-icon><span>Portada</span></a>
+                <a class="{{ request()->routeIs('articles.*') ? 'active' : '' }}" href="{{ route('articles.index') }}"><iconify-icon icon="@local:ph:newspaper"></iconify-icon><span>Noticias</span></a>
+                <a class="{{ request()->routeIs('jobs.*') ? 'active' : '' }}" href="{{ route('jobs.index') }}"><iconify-icon icon="@local:ph:briefcase"></iconify-icon><span>Empleos</span></a>
+                <a href="#newsletter"><iconify-icon icon="@local:ph:envelope-simple"></iconify-icon><span>Boletín</span></a>
             </nav>
-            <a class="button button-dark header-cta" href="{{ route('jobs.index') }}"><iconify-icon icon="ph:plus-circle"></iconify-icon> Publicar vacante</a>
+            <a class="button button-dark header-cta" href="{{ route('jobs.index') }}"><iconify-icon icon="@local:ph:plus-circle"></iconify-icon> Publicar vacante</a>
         </div>
     </header>
 
@@ -40,7 +41,7 @@
     <footer class="site-footer">
         <div class="container footer-grid">
             <div>
-                <a class="brand brand-light" href="{{ route('home') }}"><span class="brand-mark"><iconify-icon icon="ph:newspaper-clipping-duotone"></iconify-icon></span><span class="brand-copy"><strong>Magazine</strong><em>by GreenPC</em></span></a>
+                <a class="brand brand-light" href="{{ route('home') }}"><span class="brand-mark"><iconify-icon icon="@local:ph:newspaper-clipping-duotone"></iconify-icon></span><span class="brand-copy"><strong>Magazine</strong><em>by GreenPC</em></span></a>
                 <p>Periodismo útil sobre tecnología, economía, carrera y las oportunidades que mueven Ecuador.</p>
             </div>
             <div><h3>Explorar</h3><a href="{{ route('articles.index') }}">Noticias</a><a href="{{ route('jobs.index') }}">Empleos</a><a href="#newsletter">Boletín</a></div>
