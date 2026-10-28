@@ -5,7 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Magazine by GreenPC: noticias, tecnología y oportunidades laborales para Ecuador.">
     <meta name="theme-color" content="#13213c">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_EC">
+    <meta property="og:site_name" content="Magazine by GreenPC">
+    <meta property="og:title" content="@yield('title', 'Magazine by GreenPC')">
+    <meta property="og:description" content="Magazine by GreenPC: noticias, tecnología y oportunidades laborales para Ecuador.">
+    <meta property="og:image" content="{{ asset('images/magazine-greenpc-logo-v1.png') }}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="@yield('title', 'Magazine by GreenPC')">
+    <meta name="twitter:description" content="Magazine by GreenPC: noticias, tecnología y oportunidades laborales para Ecuador.">
+    <meta name="twitter:image" content="{{ asset('images/magazine-greenpc-logo-v1.png') }}">
     <title>@yield('title', 'Magazine by GreenPC') · Ideas, tecnología y empleo</title>
+    <link rel="icon" href="{{ asset('favicon.svg') }}" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="{{ asset('images/magazine-greenpc-logo-v1.png') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,600;6..72,700&display=swap" rel="stylesheet">
@@ -41,7 +53,9 @@
     <footer class="site-footer">
         <div class="container footer-grid">
             <div>
-                <a class="brand brand-light" href="{{ route('home') }}"><span class="brand-mark"><iconify-icon icon="@local:ph:newspaper-clipping-duotone"></iconify-icon></span><span class="brand-copy"><strong>Magazine</strong><em>by GreenPC</em></span></a>
+                <a class="brand brand-light" href="{{ route('home') }}" aria-label="Magazine by GreenPC, inicio">
+                    <img class="brand-logo brand-logo-footer" src="{{ asset('images/magazine-greenpc-logo-v1.png') }}" alt="Magazine by GreenPC">
+                </a>
                 <p>Periodismo útil sobre tecnología, economía, carrera y las oportunidades que mueven Ecuador.</p>
             </div>
             <div><h3>Explorar</h3><a href="{{ route('articles.index') }}">Noticias</a><a href="{{ route('jobs.index') }}">Empleos</a><a href="#newsletter">Boletín</a></div>

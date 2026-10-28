@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Magazine by GreenPC">
+    <rect width="64" height="64" rx="14" fill="#13213c"/>
+    <path d="M16 47V17h8l8 15 8-15h8v30h-8V30l-8 14-8-14v17z" fill="#fff"/>
+    <path d="M42 8h14v14z" fill="#ffb703"/>
+</svg>

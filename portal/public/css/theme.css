@@ -63,6 +63,14 @@ body {
     object-fit: contain;
 }
 
+.brand-logo-footer {
+    height: 46px;
+    max-width: min(100%, 310px);
+    padding: 7px 12px;
+    background: var(--white);
+    border-radius: 8px;
+}
+
 .brand-mark {
     width: 46px;
     height: 46px;
@@ -316,6 +324,11 @@ body {
     .brand-logo {
         height: 46px;
         max-width: 190px;
+    }
+
+    .brand-logo-footer {
+        height: 44px;
+        max-width: 240px;
     }
 
     .brand strong {
