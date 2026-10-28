@@ -9,6 +9,8 @@ class Article extends Model
     protected $fillable = [
         'title', 'slug', 'excerpt', 'body', 'category', 'image_url',
         'source_name', 'source_url', 'status', 'is_featured', 'published_at',
+        'source_external_id', 'content_hash', 'source_published_at',
+        'imported_at', 'metadata', 'ingestion_run_id',
     ];
 
     protected function casts(): array
@@ -16,6 +18,9 @@ class Article extends Model
         return [
             'is_featured' => 'boolean',
             'published_at' => 'datetime',
+            'source_published_at' => 'datetime',
+            'imported_at' => 'datetime',
+            'metadata' => 'array',
         ];
     }
 

@@ -10,6 +10,9 @@ class JobOffer extends Model
         'company', 'title', 'slug', 'sector', 'location', 'work_mode',
         'employment_type', 'salary_min', 'salary_max', 'currency', 'summary',
         'description', 'apply_url', 'status', 'is_featured', 'published_at', 'expires_at',
+        'source_name', 'source_external_id', 'source_url', 'content_hash',
+        'source_published_at', 'first_seen_at', 'last_seen_at', 'metadata',
+        'ingestion_run_id',
     ];
 
     protected function casts(): array
@@ -18,6 +21,10 @@ class JobOffer extends Model
             'is_featured' => 'boolean',
             'published_at' => 'datetime',
             'expires_at' => 'datetime',
+            'source_published_at' => 'datetime',
+            'first_seen_at' => 'datetime',
+            'last_seen_at' => 'datetime',
+            'metadata' => 'array',
         ];
     }
 
